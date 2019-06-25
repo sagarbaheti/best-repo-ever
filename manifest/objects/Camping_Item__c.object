@@ -41,93 +41,68 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>Broker_Compact</compactLayoutAssignment>
-    <compactLayouts>
-        <fullName>Broker_Compact</fullName>
-        <fields>Name</fields>
-        <fields>Title__c</fields>
-        <fields>Phone__c</fields>
-        <fields>Mobile_Phone__c</fields>
-        <fields>Email__c</fields>
-        <label>Broker Compact</label>
-    </compactLayouts>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
-    <enableReports>true</enableReports>
+    <enableReports>false</enableReports>
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
-        <fullName>Email__c</fullName>
+        <fullName>Name__c</fullName>
         <externalId>false</externalId>
-        <label>Email</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Email</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Mobile_Phone__c</fullName>
-        <externalId>false</externalId>
-        <label>Mobile Phone</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Phone</type>
-    </fields>
-    <fields>
-        <fullName>Phone__c</fullName>
-        <externalId>false</externalId>
-        <label>Phone</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Phone</type>
-    </fields>
-    <fields>
-        <fullName>Picture_IMG__c</fullName>
-        <externalId>false</externalId>
-        <formula>IMAGE( Picture__c , &quot;picture&quot; , 150, 150)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Picture</label>
+        <label>Name</label>
+        <length>10</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Picture__c</fullName>
+        <fullName>Packed__c</fullName>
+        <defaultValue>false</defaultValue>
         <externalId>false</externalId>
-        <label>Picture</label>
-        <required>false</required>
+        <label>Packed</label>
         <trackTrending>false</trackTrending>
-        <type>Url</type>
+        <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>Title__c</fullName>
+        <fullName>Price__c</fullName>
         <externalId>false</externalId>
-        <label>Title</label>
-        <length>30</length>
-        <required>false</required>
+        <label>Price</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
         <trackTrending>false</trackTrending>
-        <type>Text</type>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
         <unique>false</unique>
     </fields>
-    <label>Broker</label>
+    <label>Camping Item</label>
     <listViews>
         <fullName>All</fullName>
-        <columns>NAME</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
     <nameField>
-        <label>Broker Name</label>
+        <label>Camping Item Name</label>
         <type>Text</type>
     </nameField>
-    <pluralLabel>Brokers</pluralLabel>
+    <pluralLabel>Camping Items</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
