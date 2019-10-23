@@ -1,0 +1,11 @@
+<div id="lightning"></div>
+<script src="https://atosauto-dev-ed.my.salesforce.com/lightning/lightning.out.js"></script>
+<script>
+     $Lightning.use("c:ManageContact", function() {
+        $Lightning.createComponent("c:CreateContactRecord", {
+             objectName: "Contact"
+            },
+        },
+       'https://atosauto-dev-ed.my.salesforce.com/'
+      );
+</script>
