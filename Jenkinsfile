@@ -23,7 +23,7 @@ node {
         checkout scm
     }
     stage('Authorize DevHub') {  
-           rc = command "${toolbelt} force:auth:jwt:grant --instanceurl ${SFDC_HOST} --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile ${jwt_key_file} --setdefaultdevhubusername --setalias HubOrg"
+           rc = command "${toolbelt} force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile ${jwt_key_file} --setdefaultdevhubusername --instanceurl ${SFDC_HOST} --setalias HubOrg"
           if (rc != 0) {
               error 'Salesforce dev hub org authorization failed.'
                        }
